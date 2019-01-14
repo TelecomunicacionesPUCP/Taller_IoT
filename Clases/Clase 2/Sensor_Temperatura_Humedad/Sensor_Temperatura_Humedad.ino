@@ -5,7 +5,6 @@
 
 //Primero se debe incluir las siguientes librerias del sensor DHT
 #include <Adafruit_Sensor.h>
-
 #include <DHT.h>
 #include <DHT_U.h>
 
@@ -28,14 +27,19 @@ void setup(void)
 
 }
 
+//Con esa función se comenzará a capturar los valores de la Temperatura y Humedad
 void loop() {
+  
+    //Cada valor capturado se asigna a una respectiva variable
     float h = dht.readHumidity();
     float t = dht.readTemperature();         
+  
+    //Se comienza a imprimir los valores
     Serial.print("Current humidity = ");
     Serial.print(h);
     Serial.print("%  ");
     Serial.print("temperature = ");
     Serial.print(t); 
     Serial.println("C  ");
-  delay(800);
+  delay(800);   //Este bucle se repetirá cada 800 ms
 }
