@@ -31,7 +31,7 @@ void loop() {
   setColor(0, 0, 255);  
   delay(500);
   setColor(255, 0, 255);  
-  delay(500);  
+  delay(500);
 }
 
 void setColor(long red, long green, long blue) {
