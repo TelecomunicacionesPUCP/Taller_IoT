@@ -1,4 +1,4 @@
-#Configuración previa para uso del Nodo MCU
+# Configuración previa para uso del Nodo MCU
 
 Para poder utilizar el Nodo MCU en Arduino IDE es necesario seguir los siguientes paso:
 
