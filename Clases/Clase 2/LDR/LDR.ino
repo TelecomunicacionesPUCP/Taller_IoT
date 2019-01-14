@@ -8,10 +8,10 @@ void setup() {
 
 void loop() {
 
-  int sensorValue = analogRead(A0);   // Se lee el valor en el pin analógico 0
-  float voltage = sensorValue * (5.0 / 1023.0);   // convertir el valor analógico leído (which goes from 0 - 1023) a voltaje (0 - 5V)
+  int sensorValue = analogRead(A0);   // Se lee el valor correspondiente al pin analógico 0
+  float voltage = sensorValue * (5.0 / 1023.0);   // Se convierte el valor analógico leído (que oscila entre 0 - 1023) a voltaje (0 - 5V)
 
-  Serial.println(voltage);   // imprimir el valor leído
+  Serial.println(voltage);   // Se imprime el valor leído
   delay(1000);
 
 }
