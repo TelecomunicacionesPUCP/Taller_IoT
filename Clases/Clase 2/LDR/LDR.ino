@@ -1,6 +1,7 @@
-/* CLASE 2: SENSORES
- *  ACTIVIDAD: LDR + NODEMCU V3
- */
+/* Taller IoT PUCP Verano 2019
+*   CLASE 2: SENSORES
+*    ACTIVIDAD: LDR + NODEMCU V3
+*/
 
 void setup() {
   Serial.begin(9600);   // inicializando comunicación serial
