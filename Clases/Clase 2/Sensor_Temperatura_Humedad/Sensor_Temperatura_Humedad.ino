@@ -17,11 +17,10 @@
 //Se crea una variable tipo Objeto DHT y se le pasa los 2 parámetros definidos previamente
 DHT dht(dht_dpin, DHTTYPE); 
 
-//Se inicializa 
 void setup(void)
 { 
   dht.begin();
-  Serial.begin(9600);
+  Serial.begin(9600); //Inicializando comunicación serial
   Serial.println("Humedad y Temperatura\n\n");
   delay(700);
 
