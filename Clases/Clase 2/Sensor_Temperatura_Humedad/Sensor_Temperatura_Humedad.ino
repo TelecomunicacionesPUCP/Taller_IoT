@@ -38,5 +38,5 @@ void loop() {
   Serial.print(t); 
   Serial.println("C");
   Serial.println();
-  delay(800);   //Este bucle se repetirá cada 800 ms
+  delay(3000);   //Este bucle se repetirá cada 3000 ms = 3 s
 }
