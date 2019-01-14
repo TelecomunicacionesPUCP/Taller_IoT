@@ -3,7 +3,7 @@
  * Trabajando con un sensor de Temperatura y Humedad 
  */
 
-//Primero se debe incluir las siguientes librerias del sensor DHT11
+//Primero se debe incluir las siguientes librerias del sensor DHT
 #include <Adafruit_Sensor.h>
 
 #include <DHT.h>
