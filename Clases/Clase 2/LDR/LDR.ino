@@ -1,5 +1,5 @@
 /* CLASE 2: SENSORES
- *  LDR + NODEMCU V3
+ *  ACTIVIDAD: LDR + NODEMCU V3
  */
 
 void setup() {
