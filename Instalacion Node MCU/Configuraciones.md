@@ -1,4 +1,5 @@
 # Configuración previa para uso del Nodo MCU
+
 Para poder utilizar el Nodo MCU en Arduino IDE es necesario seguir los siguientes paso:
 
 1. Descargar el driver "CH341SER" e instalarlo en la pc.
