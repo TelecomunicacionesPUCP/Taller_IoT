@@ -1,4 +1,9 @@
-#include <Servo.h>
+/* CLASE 2: SENSORES
+ *  ACTIVIDAD: SERVO + NODEMCU V3
+ */
+
+//Se incluye la librería correspondiente
+#include <Servo.h> 
 
 Servo servo;
 
