@@ -1,10 +1,13 @@
-/* CLASE 2: SENSORES
- *  ACTIVIDAD: SERVO + NODEMCU V3
+/*
+ * Taller IoT PUCP Verano 2019
+ *   CLASE 2: SENSORES
+ *    ACTIVIDAD: SERVO + NODEMCU V3
  */
 
-//Se incluye la librería correspondiente
+//Primero se debe incluir la librería correspondiente
 #include <Servo.h> 
 
+//Se crea una variable tipo Objeto Servo
 Servo servo;
 
 void setup() {
