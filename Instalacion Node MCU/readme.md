@@ -1,4 +1,4 @@
-# Configuración previa para uso del Nodo MCU
+# Configuración previa para uso del NodeMCU
 
 Para poder utilizar el Nodo MCU en Arduino IDE es necesario seguir los siguientes paso:
 
@@ -9,4 +9,4 @@ Para poder utilizar el Nodo MCU en Arduino IDE es necesario seguir los siguiente
 5. Para seleccionar la tarjeta con la que vamos a trabajar, debemos ir a Herramientas y en Placa seleccionar "NodeMCU 1.0 (ESP-12E Module)"
 6. Una vez conectada la tarjeta a la PC, no olvidar seleccionar el puerto con el que están trabajando, para ello ir a Herramientas/Puerto.
 
-
+Link de referencia: [link](https://esp8266-arduino-spanish.readthedocs.io/es/latest/installing.html)
