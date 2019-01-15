@@ -4,7 +4,7 @@
 */
 
 void setup() {
-  Serial.begin(9600);   // inicializando comunicación serial
+  Serial.begin(9600);   // Se inicializa la comunicación serial
 }
 
 void loop() {
