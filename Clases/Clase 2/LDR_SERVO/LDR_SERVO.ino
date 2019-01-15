@@ -14,7 +14,7 @@ Servo servo;
 
 void setup() {
   Serial.begin(9600); //Se inicializa la comunicación serial
-  servo.attach(2); //Se adjunta el pin del nodeMCU que controlará al Servo
+  servo.attach(2); //Se adjunta el pin del nodeMCU que controlará al Servo, en este caso sera el pin D4 (GPIO2)
   servo.write(0); //Se setea al servo en un ángulo inicial, en este caso a 0°
   delay(1000);
   pinMode(LDRPin, INPUT); //Se define los pines de entrada y salida
