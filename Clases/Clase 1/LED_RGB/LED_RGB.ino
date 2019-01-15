@@ -24,14 +24,17 @@ void loop() {
    * (rojo, verde, azul).
    * Se pueden usar valores de 0 - 255.
    */
-  setColor(255, 0, 0);  
+  setColor(255, 0, 0); // Completamente rojo
   delay(500); // Se espera medio segundo antes de pasar al siguiente color
-  setColor(0, 255, 0);  
+  setColor(0, 255, 0);  // Completamente verde
   delay(500);
-  setColor(0, 0, 255);  
+  setColor(0, 0, 255); // Completamente azul
   delay(500);
-  setColor(255, 0, 255);  
+  setColor(255, 0, 255);  // Rojo y azul al máximo
   delay(500);
+  /* Si desean agregar nuevos colores usen la siguiente página
+   * https://htmlcolorcodes.com/color-names/
+   */
 }
 
 void setColor(long red, long green, long blue) {
@@ -42,7 +45,7 @@ void setColor(long red, long green, long blue) {
    * de 0 - 255 por el factor de dividir
    * 1024 entre 255.
    */
-  long factor = 1024.0/255.0;
+  long factor = 1023.0/255.0;
   red = red * factor;
   green = green * factor;
   blue = blue * factor;
