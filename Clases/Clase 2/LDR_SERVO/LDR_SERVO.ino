@@ -1,37 +1,38 @@
+/* Taller IoT PUCP Verano 2019
+*   CLASE 2: SENSORES
+*    ACTIVIDAD: LDR + SERVO + NODEMCU V3
+*/
+
+//Primero se debe incluir la librería correspondiente 
 #include <Servo.h>
 
-const int ledPin=D1;
+//Definiendo variables constantes
 const int LDRPin= A0;
 
+//Se crea una variable tipo Objeto SERVO
 Servo servo;
 
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  servo.attach(2);
-  servo.write(0);
-  delay(2000);
-  pinMode(ledPin, OUTPUT);
-  pinMode(LDRPin, INPUT);
+  Serial.begin(9600); //Se inicializa la comunicación serial
+  servo.attach(2); //Se adjunta el pin del nodeMCU que controlará al Servo
+  servo.write(0); //Se setea al servo en un ángulo inicial, en este caso a 0°
+  delay(1000);
+  pinMode(LDRPin, INPUT); //Se define los pines de entrada y salida
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
   int ldrStatus= analogRead(LDRPin);
-    if (ldrStatus<=300){
-      servo.write(0);
+    if (ldrStatus<=800){
+      servo.write(0); //Si el valor de la variable ldrStatus es menor o igual a 800, entonces el servo mantiene su ángulo inicial
+      Serial.println("Servo Cerrado"); //Se imprime mensaje
       delay(1000);
-      //digitalWrite(ledPin, HIGH);
-      //Serial.print(ldrStatus);
-      //Serial.println("LDR detecta oscuridad, el LED se enciende");
       
     }
     else{
-      servo.write(90);
+      servo.write(90); //Si el valor de la variable ldrStatus es mayor a 800, entonces el servo cambia a 90°
+      Serial.println("Servo Abierto"); //Se imprime mensaje
       delay(1000);
-      //digitalWrite(ledPin, LOW);
-      //Serial.println("LED apagado");
     }
-
 }
