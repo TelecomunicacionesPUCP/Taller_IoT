@@ -11,17 +11,15 @@
 Servo servo;
 
 void setup() {
-  // put your setup code here, to run once:
-  servo.attach(2); // D4
-  servo.write(0);
+  servo.attach(2); //Se adjunta el pin del nodeMCU que controlará al Servo, en este caso sera el pin D4 (GPIO2)
+  servo.write(0); //Se setea al servo en un ángulo inicial, en este caso a 0°
   delay(2000);
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  servo.write(90);
+  servo.write(90); //El servo cambia de posición a 90°
   delay(1000);
-  servo.write(0);
+  servo.write(0); //El servo cambia de posición a 0°
   delay(1000);
 }
