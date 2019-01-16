@@ -18,10 +18,9 @@ pinMode(ldrPin, INPUT); //Se define el pin A0 como entrada
 
 void loop() {
 
-int ldrStatus = analogRead(ldrPin); 
+int ldrStatus = analogRead(ldrPin); //Valor analógico entre 0 a 1023
 
   if (ldrStatus <= 900) {
-
   digitalWrite(ledPin, HIGH); //Si el valor de la variable ldrStatus es menor o igual a 900, entonces el LED se prende
   Serial.print(ldrStatus); //Se imprime el valor del voltaje
   Serial.println(" : LDR a oscuras, entonces el LED se enciende");
@@ -29,7 +28,6 @@ int ldrStatus = analogRead(ldrPin);
   }
 
   else {
-
   digitalWrite(ledPin, LOW); //Si el valor de la variable ldrStatus es mayor a 900, entonces el LED se apaga
   Serial.print(ldrStatus);
   Serial.println(" : LDR con luz, entonces el LED se apaga");
