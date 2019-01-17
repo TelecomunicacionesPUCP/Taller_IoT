@@ -20,5 +20,14 @@ El Kit de IoT contiene:
 Los componentes electrónicos pueden ser adquiridos en Jr. Paruro (Centro de Lima) o mediante mercadolibre.
 
 ## Documentación
+### Código de colores de las resistencias
+[Códigos de colores de las resistencias)](http://www.resistor-calculator.com):bar_chart:
+
+[Códigos de colores y conceptos](http://mundotelecomunicaciones1.blogspot.com/2014/09/codigos-de-colores-de-las-resistencias.html)
+
+### Hojas de datos de los sensores electrónicos:
+Sensor Ultrasonido HC-SR04
+Sensor de Humedad y Temperatura DHT11.
+Motor servo SG90.
 
 ## Referencias
