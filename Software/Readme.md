@@ -2,6 +2,8 @@
 
 Para el desarrollo del taller, se utilizará el software Arduino IDE
 
+
+
 <img src="/images/ArduinoCommunityLogo.png" alt="Arduino IDE"/>
 
 ### ¿Qué es Arduino IDE?
