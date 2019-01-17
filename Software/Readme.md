@@ -28,4 +28,14 @@ La instalación y uso de Arduino IDE es muy sencillo. A continuación se detalla
   <p align="center">
     <img src="/images/Installation.PNG" alt="Arduino IDE"/>
   </p>  
+  
+  5. Elegir la carpeta destino y hacer clic en *"Install"*
+  <p align="center">
+    <img src="/images/save_sw.PNG" alt="Arduino IDE"/>
+  </p>  
+  
+  6. Esperar a que termine de instalar y hacer clic en *"Close"*
+  <p align="center">
+    <img src="/images/installed.PNG" alt="Arduino IDE"/>
+  </p>  
     
