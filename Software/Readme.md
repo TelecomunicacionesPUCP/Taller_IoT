@@ -18,6 +18,6 @@ La instalación y uso de Arduino IDE es muy sencillo. A continuación se detalla
   
   2. Descargar el programa de acuerdo al Sistema Operativo (Windows, Linux, MacOS) que tenga la PC y ejecutarlo.
   3. Nos va aparecer un ventana acerca del Acuerdo de Licencia. Hacer clic en *"I agree"*.
-    <img align=center src="/images/License agreement.PNG" alt="Arduino IDE"/>
+    <img align="center" src="/images/License agreement.PNG" alt="Arduino IDE"/>
   4. Luego nos aparecerá la siguiente ventana, debemos dejar todas las opciones marcadas y hacer clic en *"Next"*
     <img src="/images/Installation.PNG" alt="Arduino IDE"/>
