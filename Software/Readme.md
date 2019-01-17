@@ -41,7 +41,7 @@ La instalación y uso de Arduino IDE es muy sencillo. A continuación se detalla
   
   **NOTA:** Si Windows solicita permiso para la instalación de Arduino USB Driver, se debe aceptar y hacer clic en *"Instalar"*, de lo contrario tendremos problemas para la comunicación entre la placa y la PC.
   <p align="center">
-    <img src="/images/puertos.PNG" alt="Arduino IDE"/>
+    <img src="/images/puertos1.PNG" alt="Arduino IDE"/>
   </p>  
   <p align="center">
     <img src="/images/puertos2.PNG" alt="Arduino IDE"/>
