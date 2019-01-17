@@ -57,6 +57,8 @@ La instalación y uso de Arduino IDE es muy sencillo. A continuación se detalla
   
 # Documentación
 
-  [Lenguaje de programación Arduino](https://www.arduino.cc/reference/en/)
+   [Lenguaje de programación Arduino](https://www.arduino.cc/reference/en/)
+  
   [Librerías](https://www.arduino.cc/en/Reference/Libraries)
+  
   [Glosario](https://www.arduino.cc/glossary/en/)
