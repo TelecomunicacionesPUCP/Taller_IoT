@@ -14,7 +14,7 @@ La instalación y uso de Arduino IDE es muy sencillo. A continuación se detalla
 
   1. Se debe descarg el programa de la página oficial de Arduino, para ello deberá hacer clic [aqui](https://www.arduino.cc/en/Main/Software) para redirigirse a la página web.  
   
-  <img src="/images/arduino_OS.png" alt="Arduino IDE_Software"/>
+  <img src="/images/arduino_OS.PNG" alt="Arduino IDE_Software"/>
   
   [Arduino IDE]:bar_chart:
   
