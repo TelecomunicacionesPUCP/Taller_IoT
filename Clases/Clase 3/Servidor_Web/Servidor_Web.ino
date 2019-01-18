@@ -11,7 +11,7 @@
 
 #include <ESP8266WiFi.h>
 
-//Se coloca las credenciales de la red WiFi 
+//Se declara como variable las credenciales de la red WiFi 
 char ssid[] = "redpucp";
 char password[] = "C9AA28BA93";
 
