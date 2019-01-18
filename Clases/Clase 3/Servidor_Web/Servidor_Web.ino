@@ -1,3 +1,8 @@
+/* Taller IoT PUCP Verano 2019
+*   CLASE 3: WiFi
+*    ACTIVIDAD: Creación de un Servidor Web en el ESP8266
+*/
+
 //Se debe agregar las librerias necesarias
 #include <ESP8266WebServer.h>
 #include <ESP8266WebServerSecure.h>
