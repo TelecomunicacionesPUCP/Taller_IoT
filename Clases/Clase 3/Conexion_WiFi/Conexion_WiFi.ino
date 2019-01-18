@@ -28,7 +28,7 @@ void setup() {
   Serial.println("");
   Serial.println("WiFi conectado");
   Serial.println("Direccion IP: ");
-  Serial.println(WiFi.localIP());
+  Serial.println(WiFi.localIP()); //Se obtiene la dirección IP asignada
 }
 
 void loop() {
