@@ -37,15 +37,16 @@ void loop() {
   long duration
   long distance;
   
-  digitalWrite(TRIGGER, LOW);  
+  digitalWrite(TRIGGER, LOW); 
   delayMicroseconds(2); 
   
-  digitalWrite(TRIGGER, HIGH);
+  digitalWrite(TRIGGER, HIGH); //El pin D1 comienza a trasmitir, es decir manda una señal por un determinado intervalo de tiempo
   delayMicroseconds(10); 
   
   digitalWrite(TRIGGER, LOW);
   
-  duration = pulseIn(ECHO, HIGH);
+  duration = pulseIn(ECHO, HIGH); //El comando pulseIn() leerá el pulso del pin D2, el pulso que deberá leer será cuando este en HIGH
+                                  //El valor que nos devuelve es la longitud del pulso en microsegundos, devolverá 0 si no hay pulso
   distance = (duration/2) / 29.1;
 
    
