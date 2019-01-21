@@ -22,8 +22,10 @@ char pass[] = "C9AA28BA93";
 
 void setup() {
   
-  Serial.begin (9600);
-  Blynk.begin(auth, ssid, pass);
+  Serial.begin (9600);  // Se inicialzia la comunicación serial
+  Blynk.begin(auth, ssid, pass); // Se inicia la comunicación con Blynk con los datos definidos previamente
+  
+  //Se define los pines de salida del ultrasonido
   pinMode(TRIGGER, OUTPUT);
   pinMode(ECHO, INPUT);
   pinMode(BUILTIN_LED, OUTPUT);
