@@ -33,7 +33,10 @@ void setup() {
 
 void loop() {
   
-  long duration, distance;
+  //Se define las variables a utilizar
+  long duration
+  long distance;
+  
   digitalWrite(TRIGGER, LOW);  
   delayMicroseconds(2); 
   
@@ -41,10 +44,15 @@ void loop() {
   delayMicroseconds(10); 
   
   digitalWrite(TRIGGER, LOW);
+  
   duration = pulseIn(ECHO, HIGH);
   distance = (duration/2) / 29.1;
 
-   if (distance <= 150) {
+   
+  //Para el uso de los LEDs, se define condicionales y de acuerdo a la distancia obtenida se prenderá un LED 
+  //Los colores del LED se definen en la APP de Blynk
+  //Cada LED tendra asignado un pin virtual (V0, V1, V2, V3 y V4)
+  if (distance <= 150) {
     Blynk.virtualWrite(V0, 255);
 }
   else {
@@ -80,10 +88,11 @@ void loop() {
   }
 
   
-  
-  Serial.print(distance);
+  Serial.print(distance); //Se imprime el valor de la distancia
   Serial.println("Centimeter:");
-  Blynk.virtualWrite(V5, distance);
+  
+  Blynk.virtualWrite(V5, distance); // Uso de un pin virtual V5
+
   delay(200);
-  Blynk.run();
+  Blynk.run(); // Se mantiene la conexión con Blynk
 }
