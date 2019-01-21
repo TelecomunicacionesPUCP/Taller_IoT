@@ -26,8 +26,8 @@ void setup() {
   Blynk.begin(auth, ssid, pass); // Se inicia la comunicación con Blynk con los datos definidos previamente
   
   //Se define los pines de salida del ultrasonido
-  pinMode(TRIGGER, OUTPUT);
-  pinMode(ECHO, INPUT);
+  pinMode(TRIGGER, OUTPUT); //El pin D1 será el que transmita la señal hasta que ésta choque con algún objeto
+  pinMode(ECHO, INPUT); //El pin D2 será el que reciba la señal reflejada, una vez haya chocado con el objeto
   pinMode(BUILTIN_LED, OUTPUT);
 }
 
@@ -41,15 +41,17 @@ void loop() {
   delayMicroseconds(2); 
   
   digitalWrite(TRIGGER, HIGH); //El pin D1 comienza a trasmitir, es decir manda una señal por un determinado intervalo de tiempo
+                              
   delayMicroseconds(10); 
   
   digitalWrite(TRIGGER, LOW);
   
   //El comando pulseIn() leerá el pulso del pin 2, esperará que el pulso cambie de Low a High para empezar a medir el tiempo. 
   //Luego esperará a que regrese el pulso a Low para detener el tiempo, esto se debe a que el pulso que medirá será el HIGH
-  duration = pulseIn(ECHO, HIGH); //El valor que no da es la longitud del pulso en microsegundos
+  duration = pulseIn(ECHO, HIGH); //El valor que nos da será la longitud del pulso en microsegundos
   
-  distance = (duration/2) / 29.1;
+  distance = (duration/2) / 29.1; //Se calcula la distancia obteniendo un valor entero en cm
+  
 
    
   //Para el uso de los LEDs, se define condicionales y de acuerdo a la distancia obtenida se prenderá un LED 
