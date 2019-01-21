@@ -45,8 +45,10 @@ void loop() {
   
   digitalWrite(TRIGGER, LOW);
   
-  duration = pulseIn(ECHO, HIGH); //El comando pulseIn() leerá el pulso del pin D2, el pulso que deberá leer será cuando este en HIGH
-                                  //El valor que nos devuelve es la longitud del pulso en microsegundos, devolverá 0 si no hay pulso
+  //El comando pulseIn() leerá el pulso del pin 2, esperará que el pulso cambie de Low a High para empezar a medir el tiempo. 
+  //Luego esperará a que regrese el pulso a Low para detener el tiempo, esto se debe a que el pulso que medirá será el HIGH
+  duration = pulseIn(ECHO, HIGH); //El valor que no da es la longitud del pulso en microsegundos
+  
   distance = (duration/2) / 29.1;
 
    
