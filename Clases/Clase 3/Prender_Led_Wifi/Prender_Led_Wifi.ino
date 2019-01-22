@@ -21,7 +21,7 @@ ESP8266WebServer server(80);
 void handleRoot() {
   Serial.println("Pagina principal");
   String body = "<h1>Bienvenido!!</h1>";
-  body += "<p>Auemnta /on a la URL para prender el LED y /off para apagarlo</p>"
+  body += "<p>Auemnta /on a la URL para prender el LED y /off para apagarlo</p>";
   server.send(200, "text/html", body);
 }
 
