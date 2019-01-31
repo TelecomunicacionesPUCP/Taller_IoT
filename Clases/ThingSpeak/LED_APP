@@ -1,0 +1,41 @@
+/* CONECTANDO EL NodeMCU a ThingSpeak
+ * CURSO TALLE de IoT
+ *  
+ */
+
+#include <ESP8266WiFi.h>;
+#include <WiFiClient.h>;
+#include <ThingSpeak.h>;
+ 
+const char* ssid = "mired"; //El SSID o nombre de la red WiFi
+const char* password = "micontraseña"; //La contraseña de red WIFI
+
+int val;
+int LDRpin = A0; //El LDR conectado al pin analógico A0 
+  
+ 
+WiFiClient client;
+unsigned long myChannelNumber = mychannel; //Ingresa Channel Number (sin Brackets)
+const char * myWriteAPIKey = "mykey"; //Ingresa tu API Key
+
+void setup()
+ {
+Serial.begin(9600);
+delay(10);
+ 
+// Conexión a la red WIFI
+WiFi.begin(ssid, password);
+ThingSpeak.begin(client);
+ }
+ 
+ 
+ 
+void loop()
+{
+val = analogRead(LDRpin); //Leer el valor del LDR
+Serial.print(val); //Print on Serial Monitor
+delay(1000);
+ThingSpeak.writeField(myChannelNumber, 1,val, myWriteAPIKey); //Update in ThingSpeak
+delay(100);
+ 
+}
