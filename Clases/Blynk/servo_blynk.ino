@@ -37,13 +37,9 @@ void setup() {
 }
 
 BLYNK_WRITE(V2) {
-
-servo.write(param.asInt());
-
+  servo.write(param.asInt());
 }
   
 void loop() {
-
-Blynk.run();
-
+  Blynk.run();
 }
