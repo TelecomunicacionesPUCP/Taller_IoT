@@ -92,9 +92,9 @@ void loop() {
     Blynk.virtualWrite(V4, 0);
   }
 
-  
+  Serial.println("Centimeter: ");
   Serial.print(distance); //Se imprime el valor de la distancia
-  Serial.println("Centimeter:");
+  Serial.println(" cm");
   
   Blynk.virtualWrite(V5, distance); // Uso de un pin virtual V5
 
