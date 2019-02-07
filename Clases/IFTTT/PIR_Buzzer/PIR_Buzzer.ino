@@ -3,24 +3,32 @@
 
 const char* ssid = "redpucp";
 const char* password = "C9AA28BA93";
-const char* host = "maker.ifttt.com";
-const char* apiKey = "dvrBskXq99ciGNlLOKRET";
+String host = "maker.ifttt.com";
+String apiKey = " ";
 
 
 int Status = 12; //Se define el pin a usar, en este caso será el D6 para el Buzzer
 int sensor = 13; //Se define el pin a usar, en este caso será el D7 para el PIR
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(9600); //Se inicializa la comunicación serial
+  delay(10);
+  
+  Serial.print("Conectando a ");
+  Serial.println(ssid); 
+  
+  WiFi.mode(WIFI_STA);
 
-  Serial.print("Conectándose a ");
-    Serial.println(ssid);
-    WiFi.begin(ssid, password);
-    
-    while (WiFi.status() != WL_CONNECTED) {
-      delay(500);
-      Serial.print(".");
-    }
+  //Nos conectamos a la red WiFi
+  WiFi.begin(ssid, password);  
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.println("WiFi conectado");
+  Serial.println("Direccion IP: ");
+  Serial.println(WiFi.localIP()); //Se obtiene la dirección IP asignada
 
   pinMode(sensor, INPUT); // declare sensor as input
   pinMode(Status, OUTPUT);  // declare LED as output
@@ -29,27 +37,26 @@ void setup() {
 
 void loop(){
   long state = digitalRead(sensor);
-  delay(1000);
   
- if (state == HIGH) {
-   digitalWrite (Status, 255);
-   Serial.println("Movimiento Detectado");
-   delay(5000);
- }
+  if (state == HIGH) {
+    digitalWrite (Status, 255);
+    Serial.println("Movimiento Detectado");
+    
+    HTTPClient http;
+    String url = "http://" + host + "/trigger/alarma_intruso/with/key/" + apiKey;
+    Serial.println(url);
+    http.begin(url);
+  
+    int httpCode = http.GET();
+    if (httpCode > 0) Serial.println(http.getString());
+    else Serial.println("Error conexión");
+    http.end();
+  }
+  
+  else {
+    digitalWrite (Status, 0);
+    Serial.println("Movimiento no Detectado");
+  }
  
- else {
-   digitalWrite (Status, 0);
-   Serial.println("Movimiento no Detectado");
- }
-
- HTTPClient http;
- String url = host + "/trigger/alarma_intruso/with/key/" + apiKey;;
- http.begin(url);
-
- int httpCode = http.GET();
- if (httpCode > 0 && httpCode == HTTP_CODE_OK) Serial.println(http.getString());
- else Serial.println("Error conexión");
- http.end();
- 
- delay(100);
+  delay(5000);
 }
