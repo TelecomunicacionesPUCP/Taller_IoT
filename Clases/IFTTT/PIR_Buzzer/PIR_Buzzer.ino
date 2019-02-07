@@ -10,14 +10,6 @@ const char* apiKey = "dvrBskXq99ciGNlLOKRET";
 int Status = 12; //Se define el pin a usar, en este caso será el D6 para el Buzzer
 int sensor = 13; //Se define el pin a usar, en este caso será el D7 para el PIR
 
-volatile int flag = false;
-const char* alarma_state = "apagado";
-
-void AlarmaStatus() {
-   alarma_state = "encendido";  
-   flag = true;
-}
-
 void setup() {
   Serial.begin(9600);
 
