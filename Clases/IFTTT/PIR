@@ -1,0 +1,21 @@
+
+int alerta = 12; //pin D6
+int sensor = 13; //pin D7
+
+void setup() {
+  pinMode(sensor, INPUT); // declaramos el  sensor como input (ENTRADA)
+  pinMode(alerta, OUTPUT);  // declaramos LED como output (SALIDA)
+}
+
+void loop(){
+  long estado = digitalRead(sensor);
+  delay(1000);
+    if(estado == HIGH){
+      digitalWrite (alerta, HIGH);
+      Serial.println("Movimiento detectado!");
+    }
+    else {
+      digitalWrite (alerta, LOW);
+      Serial.println("NO hay movimiento!");
+      }
+}
