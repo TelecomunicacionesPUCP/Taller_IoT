@@ -41,8 +41,7 @@ char* token = "";
 char* ssid = "redpucp";
 char* password = "C9AA28BA93";
 
-void setup()
-{
+void setup() {
   // Inicializar la comunicación serial
   Serial.begin(9600);
 
@@ -111,8 +110,7 @@ BLYNK_WRITE(V5) {
   irsend.sendRC6(0x21, 20);
 }
 
-void loop()
-{
+void loop() {
   // Se mantiene la conexión con Blynk
   Blynk.run();
 }
