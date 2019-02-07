@@ -75,7 +75,7 @@ BLYNK_WRITE(V2) {
 
   for (int i = 0; i < veces; i++) {
     if (cambio) irsend.sendRC6(0x10, 20);
-    else irsend.sendRC6(irsend.toggleRC6(0x10, 20)); Se usa una función de la librería para cambiar la información que se envía
+    else irsend.sendRC6(irsend.toggleRC6(0x10, 20)); // Se usa una función de la librería para cambiar la información que se envía
     cambio = !cambio;
     delay(200);
   }
